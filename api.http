@@ -1,0 +1,56 @@
+
+GET http://localhost:3000/products
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Product 1 description",
+    "image_url": "https://via.placeholder.com/150",
+    "price": 100
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "doe",
+  "password": "doe"
+}
+
+
+###
+GET  http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZG9lIiwiaWF0IjoxNzA2NzU0ODM5LCJleHAiOjE3MDY4NDEyMzl9.Nj_sCSD4dMuAo3uIZ3k98mTKxVZjX2EH4vBj3-DX1II
+
+###
+POST  http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZG9lIiwiaWF0IjoxNzA2NzU0ODM5LCJleHAiOjE3MDY4NDEyMzl9.Nj_sCSD4dMuAo3uIZ3k98mTKxVZjX2EH4vBj3-DX1II
+
+
+{
+    "items": [
+        {
+          "product_id": "04c4353a-3f6d-4272-a8f2-44b82c05ecc0",
+          "quantity": 1
+        },
+        {
+          "product_id": "0afa7630-4fc1-4d69-beed-4f8f15becadc",
+          "quantity": 2
+        },
+        {
+          "product_id": "66805003-f9a2-4772-b577-d5ff66207707",
+          "quantity": 1
+        }
+    ],
+    "card_hash": "123"
+}
+
+###
+GET http://localhost:3000/orders/4d9efb55-3ea6-4583-88ed-c4c9976d7cd5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZG9lIiwiaWF0IjoxNzA2NzUyNjg1LCJleHAiOjE3MDY4MzkwODV9.eONMXN5Qgt_6fXUp2J6xMb3RWEVY3K7IljyPbmSFsXc
