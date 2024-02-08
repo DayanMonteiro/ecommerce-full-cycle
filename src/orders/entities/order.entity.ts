@@ -4,13 +4,13 @@ import {
   Entity,
   OneToMany,
   PrimaryGeneratedColumn,
-} from 'typeorm';
-import { OrderItem } from './order-item.entity';
+} from "typeorm";
+import { OrderItem } from "./order-item.entity";
 
 export enum OrderStatus {
-  PENDING = 'pending',
-  PAID = 'paid',
-  FAILED = 'failed',
+  PENDING = "pending",
+  PAID = "paid",
+  FAILED = "failed",
 }
 
 export type CreateOrderCommand = {
@@ -24,10 +24,10 @@ export type CreateOrderCommand = {
 
 @Entity()
 export class Order {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column({ type: 'decimal', precision: 10, scale: 2 })
+  @Column({ type: "decimal", precision: 10, scale: 2 })
   total: number;
 
   @Column()
@@ -39,7 +39,10 @@ export class Order {
   @CreateDateColumn()
   created_at: Date;
 
-  @OneToMany(() => OrderItem, (item) => item.order, { cascade: ['insert'] })
+  @OneToMany(() => OrderItem, (item) => item.order, {
+    cascade: ["insert"],
+    eager: true,
+  })
   items: OrderItem[];
 
   static create(input: CreateOrderCommand) {
