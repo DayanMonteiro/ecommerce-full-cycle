@@ -18,19 +18,19 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "username": "doe",
-  "password": "doe"
+  "username": "john",
+  "password": "john"
 }
 
 
 ###
 GET  http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZG9lIiwiaWF0IjoxNzA2NzU0ODM5LCJleHAiOjE3MDY4NDEyMzl9.Nj_sCSD4dMuAo3uIZ3k98mTKxVZjX2EH4vBj3-DX1II
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzQyNjQ1NSwiZXhwIjoxNzA3NTEyODU1fQ.aN2ROPab7oXyZh9dT_bZVuTZNDyEQnuf55K7SizCKGg
 
 ###
 POST  http://localhost:3000/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZG9lIiwiaWF0IjoxNzA2NzU0ODM5LCJleHAiOjE3MDY4NDEyMzl9.Nj_sCSD4dMuAo3uIZ3k98mTKxVZjX2EH4vBj3-DX1II
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNzQyNjQ1NSwiZXhwIjoxNzA3NTEyODU1fQ.aN2ROPab7oXyZh9dT_bZVuTZNDyEQnuf55K7SizCKGg
 
 
 {
